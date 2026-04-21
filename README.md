@@ -210,9 +210,10 @@ orchestrate toolkits get --name sku-availability-checker_test_0
 
 Una vez configurado el agente en watsonx Orchestrate, puedes hacer preguntas como:
 
+- *"What are the available SKUs in Mall of Egypt?"*
 - *"¿Cuántos Laptop Dell XPS 15 hay disponibles en Dubai Mall?"*
+- *"Is there stock of the iPhone 15 Pro in any branch?"*
 - *"Muéstrame el inventario de todos los productos en Mall of Egypt"*
-- *"¿Hay stock del iPhone 15 Pro en alguna sucursal?"*
 
 
 **Desarrollado con ❤️ usando IBM Bob como asistente de desarrollo**

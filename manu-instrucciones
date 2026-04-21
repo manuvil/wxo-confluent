@@ -1,0 +1,33 @@
+// creamos entorno virtual de python 3.12
+python3.12 -m venv .venv
+
+source .venv/bin/activate
+
+// comprobamos la version de python
+python --version
+
+pip install --force-reinstall -r requirements.txt
+
+//comprobamos que los requerimientos estén correctamente en el entorno virtual. x ejemplo 
+pip show confluent-kafka
+
+// Crear fichero .env con la base de .env.example para modificar las variables de entorno
+
+// ejecutar create_topic.py
+python create_topic.py
+
+//ejecutamos el setup de ksqlDB
+python setup_ksqldb_streams.py
+
+//producimos mensajes
+python produce_messages.py
+
+// requisito -> tener watsonx orchestrate configurado y activo (pip install ibm-watsonx-orchestrate)
+
+// importamos en nuestro orchestrate el toolkit
+orchestrate toolkits add --kind mcp --name "sku-availability-checker_test_0" --description "Real-time inventory availability checker using Confluent Kafka and ksqlDB" --package-root "./sku_availability_mcp" --command "python get_sku_availability.py" --tools "*"
+
+// puede que tengas que activar el entono
+orchestrate env activate {nombre}
+//o borrar el toolkit
+orchestrate toolkits remove --name sku-availability-checker_test_0

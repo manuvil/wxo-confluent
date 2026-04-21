@@ -1,0 +1,14 @@
+# Confluent Kafka Python Client
+confluent-kafka>=2.3.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# HTTP requests for ksqlDB API
+requests>=2.31.0
+
+# FastMCP for MCP server
+fastmcp>=3.2.4
+
+# Additional dependencies for the project
+# Add other dependencies as needed
